@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="cover-heading">URL shortener service.</h1>
+<p class="lead">Make use of inBits URL shortener to minimize the number of characters in a link and share!</p>
+<p class="lead">
+        <form  method='POST' action='.'> 
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class='btn btn-lg btn-secondary' type='submit' value='Shorten &raquo;' >
+        </form>
+</p>
+{% endblock %}

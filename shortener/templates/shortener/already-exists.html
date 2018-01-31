@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="cover-heading">Already exists</h1>
+<p class="lead">
+        <p>{{ object.url }}</p>
+        {% if object.counturl.count %}<button type="button" class="btn btn-lg btn-secondary">
+  		Count<span class="badge badge-info"">{{ object.counturl.count }}</span>
+  		<span class="sr-only">Number of counts.</span>
+		</button>
+		{% endif %}
+		<p><a href="{{ object.get_short_url }}">{{ object.get_short_url }}</a></p>
+		<a href='/' class='btn btn-lg btn-secondary'>+New</a>
+</p>
+{% endblock %}
